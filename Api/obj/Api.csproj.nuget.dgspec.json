@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/et12alumno/Vanina3/WebApi/Api/Api.csproj": {}
+    "C:\\Users\\usuario\\Desktop\\Vanina\\WebApi\\api\\Api.csproj": {}
   },
   "projects": {
-    "/home/et12alumno/Vanina3/WebApi/Api/Api.csproj": {
+    "C:\\Users\\usuario\\Desktop\\Vanina\\WebApi\\api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/et12alumno/Vanina3/WebApi/Api/Api.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Vanina\\WebApi\\api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "/home/et12alumno/Vanina3/WebApi/Api/Api.csproj",
-        "packagesPath": "/home/et12alumno/.nuget/packages/",
-        "outputPath": "/home/et12alumno/Vanina3/WebApi/Api/obj/",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\Vanina\\WebApi\\api\\Api.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\Vanina\\WebApi\\api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/et12alumno/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -66,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
