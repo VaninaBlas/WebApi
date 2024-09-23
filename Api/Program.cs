@@ -131,7 +131,6 @@ app.MapPut("/rol/{idRol}", ([FromQuery] int idRol, [FromBody] Rol rol)=>{
     if(rolAActualizar.Nombre != rol.Nombre)
         return Results.BadRequest();
 
-    //consulta: segun lo de clase solo se deben actualizar los string excepto nombre pero para rol el unico string es nombre ¿?
     rolAActualizar.Habilitado=rol.Habilitado;
     return Results.Ok(roles);
 })
@@ -168,7 +167,6 @@ app.MapDelete("/rol/{idRol}/usuario/{idUsuario}", (int idRol, int idUsuario)=>{
     var rol = roles.FirstOrDefault(rol => rol.IdRol == idRol);
     var usuario = usuarios.FirstOrDefault(usuario => usuario.IdUsuario == idUsuario);
 
-    //consulta: que pasa si la relacion no existe? porque aca la elimina aunque no exista, deberia solo eliminar relaciones existentes
     if (usuario != null && rol != null )
     {
         rol.Usuarios.Remove(usuario);

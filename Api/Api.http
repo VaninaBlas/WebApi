@@ -1,6 +1,15 @@
 @Api_HostAddress = http://localhost:5058
 
-GET {{Api_HostAddress}}/weatherforecast/
+GET {{Api_HostAddress}}/roles/
 Accept: application/json
 
+###
+POST {{Api_HostAddress}}/rol/
+Content-Type: application/json
+{
+    "IdRol":2,
+    "Nombre": "Juan",
+    "Habilitado": true,
+    "FechaCreacion": "2023-03-12"
+}
 ###
