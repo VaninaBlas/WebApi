@@ -1,15 +1,86 @@
 @Api_HostAddress = http://localhost:5058
-
+###
+// ROL
+// Ver todos los roles
 GET {{Api_HostAddress}}/roles/
 Accept: application/json
-
 ###
+// Obtener rol especifico
+GET {{Api_HostAddress}}/rol?idRol=1
+Accept: application/json
+###
+// Crear rol
 POST {{Api_HostAddress}}/rol/
 Content-Type: application/json
 {
-    "IdRol":2,
-    "Nombre": "Juan",
+    "IdRol":7,
+    "Nombre": "Delegado",
     "Habilitado": true,
     "FechaCreacion": "2023-03-12"
 }
+###
+// Actualizar rol
+PUT {{Api_HostAddress}}/rol?idRol=2
+Content-Type: application/json
+{
+    "Nombre":"Alumno",
+    "Habilitado": false
+}
+###
+// Eliminar rol
+DELETE {{Api_HostAddress}}/rol?idrol=1
+Accept: application/json
+### 
+
+// USUARIO
+// Ver todos los usuarios
+GET {{Api_HostAddress}}/usuarios/
+Accept: application/json
+###
+// Obtener usuario especifico
+GET {{Api_HostAddress}}/usuario?idUsuario=1
+Accept: application/json
+###
+// Crear usuario
+POST {{Api_HostAddress}}/usuario/
+Content-Type: application/json
+{
+    "IdUsuario":4,
+    "Nombre": "Iliana",
+    "Email":"iliana.duarte@gmail.com",
+    "NombreUsuario":"iliduarte",
+    "Contraseña":"floresAmarillas",
+    "Habilitado": true,
+    "FechaCreacion": "2024-09-21"
+}
+###
+// Actualizar usuario
+PUT {{Api_HostAddress}}/usuario?idUsuario=2
+Content-Type: application/json
+{
+    "Nombre":"Priscila",
+    "Email":"priet12@gmail.com",
+    "NombreUsuario":"pri.indumentaria@gmail.com",
+    "Contraseña":"michis"
+}
+###
+// Eliminar usuario
+DELETE {{Api_HostAddress}}/usuario?idUsuario=3
+Accept: application/json
+###
+
+// Relacion usuario y rol
+// rol a usuario
+POST {{Api_HostAddress}}/rol/3/usuario/1
+Content-Type: application/json
+###
+DELETE {{Api_HostAddress}}/rol/3/usuario/1
+Content-Type: application/json
+###
+// usuario a rol
+POST {{Api_HostAddress}}/usuario/1/rol/2
+Content-Type: application/json
+###
+DELETE {{Api_HostAddress}}/usuario/1/rol/2
+Content-Type: application/json
 ###

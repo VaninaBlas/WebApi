@@ -49,7 +49,7 @@ app.MapGet("/usuarios", () =>{
     .WithTags("Usuario");
 
 //Obtener usuario por id
-app.MapGet("/usuario/{idUsuario}", ([FromQuery] int idUsuario) =>
+app.MapGet("/usuario", ([FromQuery] int idUsuario) =>
 {
     var usuarioAEspecifico = usuarios.FirstOrDefault(usuario => usuario.IdUsuario == idUsuario);
     if (usuarioAEspecifico != null)
@@ -62,7 +62,7 @@ app.MapGet("/usuario/{idUsuario}", ([FromQuery] int idUsuario) =>
     }
 })
     .WithTags("Usuario");
-app.MapPut("/usuario/{idUsuario}", ([FromQuery] int idUsuario, [FromBody] Usuario usuario) =>
+app.MapPut("/usuario", ([FromQuery] int idUsuario, [FromBody] Usuario usuario) =>
 {
     var usuarioAActualizar = usuarios.FirstOrDefault(usuario => usuario.IdUsuario == idUsuario);
     if(usuarioAActualizar == null)
@@ -77,7 +77,7 @@ app.MapPut("/usuario/{idUsuario}", ([FromQuery] int idUsuario, [FromBody] Usuari
 
 })
     .WithTags("Usuario");
-app.MapDelete("/usuario/{idUsuario}", ([FromQuery] int idUsuario) =>
+app.MapDelete("/usuario", ([FromQuery] int idUsuario) =>
 {
     var usuarioAEliminar = usuarios.FirstOrDefault(usuario => usuario.IdUsuario == idUsuario);
     if (usuarioAEliminar != null)
@@ -111,7 +111,7 @@ app.MapGet("/roles", ()=>{
     return Results.Ok(roles);
 })
     .WithTags("Rol");
-app.MapGet("/rol/{idRol}", ([FromQuery] int idRol)=>{
+app.MapGet("/rol", ([FromQuery] int idRol)=>{
     var rolAEspecifico = roles.FirstOrDefault(rol => rol.IdRol == idRol);
     if (rolAEspecifico != null)
     {
@@ -123,7 +123,7 @@ app.MapGet("/rol/{idRol}", ([FromQuery] int idRol)=>{
     }
 })
     .WithTags("Rol");
-app.MapPut("/rol/{idRol}", ([FromQuery] int idRol, [FromBody] Rol rol)=>{
+app.MapPut("/rol", ([FromQuery] int idRol, [FromBody] Rol rol)=>{
     
     var rolAActualizar = roles.FirstOrDefault(rol => rol.IdRol == idRol);
     if(rolAActualizar == null)
@@ -135,7 +135,7 @@ app.MapPut("/rol/{idRol}", ([FromQuery] int idRol, [FromBody] Rol rol)=>{
     return Results.Ok(roles);
 })
     .WithTags("Rol");
-app.MapDelete("/rol/{idRol}", ([FromQuery] int idRol)=>{
+app.MapDelete("/rol", ([FromQuery] int idRol)=>{
     var rolAEliminar = roles.FirstOrDefault(rol => rol.IdRol == idRol);
     if (rolAEliminar != null)
     {
