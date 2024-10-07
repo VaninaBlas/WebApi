@@ -2,56 +2,51 @@
 ###
 // ROL
 // Ver todos los roles
-GET {{Api_HostAddress}}/roles/
+GET {{Api_HostAddress}}/api/roles/
 Accept: application/json
 ###
 // Obtener rol especifico
-GET {{Api_HostAddress}}/rol?idRol=1
+GET {{Api_HostAddress}}/api/rol?idRol=ca98c96f-73a3-4ec3-8491-aeccb449ef10
 Accept: application/json
 ###
 // Crear rol
-POST {{Api_HostAddress}}/rol/
+POST {{Api_HostAddress}}/api/rol/
 Content-Type: application/json
 {
-    "IdRol":7,
     "Nombre": "Delegado",
-    "Habilitado": true,
-    "FechaCreacion": "2023-03-12"
+    "Habilitado": true
 }
 ###
 // Actualizar rol
-PUT {{Api_HostAddress}}/rol?idRol=2
+PUT {{Api_HostAddress}}/api/rol?idRol=6fbc67c7-9ed0-495c-b4d4-8b0446194eed
 Content-Type: application/json
 {
-    "Nombre":"Alumno",
+    "Nombre": "estudiante",
     "Habilitado": false
 }
 ###
 // Eliminar rol
-DELETE {{Api_HostAddress}}/rol?idrol=1
+DELETE {{Api_HostAddress}}/api/rol?idrol=ca98c96f-73a3-4ec3-8491-aeccb449ef10
 Accept: application/json
 ### 
 
 // USUARIO
 // Ver todos los usuarios
-GET {{Api_HostAddress}}/usuarios/
+GET {{Api_HostAddress}}/api/usuarios/
 Accept: application/json
 ###
 // Obtener usuario especifico
-GET {{Api_HostAddress}}/usuario?idUsuario=1
+GET {{Api_HostAddress}}/api/usuario?idUsuario=1
 Accept: application/json
 ###
 // Crear usuario
-POST {{Api_HostAddress}}/usuario/
+POST {{Api_HostAddress}}/api/usuario/
 Content-Type: application/json
 {
-    "IdUsuario":4,
-    "Nombre": "Iliana",
+    "Nombre": "fdṕasdkpśfksdñlf{}",
     "Email":"iliana.duarte@gmail.com",
     "NombreUsuario":"iliduarte",
-    "Contraseña":"floresAmarillas",
-    "Habilitado": true,
-    "FechaCreacion": "2024-09-21"
+    "Contrasena":"floresAmarillas"
 }
 ###
 // Actualizar usuario

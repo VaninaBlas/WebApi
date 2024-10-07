@@ -1,12 +1,8 @@
-using Api;
-using Microsoft.AspNetCore.Mvc;
 using Api.Endpoints;
 using Api.Models;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -31,4 +27,5 @@ app.MapGroup("/api")
 app.MapGroup("/api")
     .MapRolEndpoints()
     .WithTags("Rol");
+
 app.Run();
