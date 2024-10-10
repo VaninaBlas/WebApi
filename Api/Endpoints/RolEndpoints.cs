@@ -58,6 +58,7 @@ public static class RolEndpoints
             if (rolAEliminar != null)
             {
                 rolAEliminar.Habilitado = false;
+                //context.Rols.Remove(rolAEliminar);
                 context.SaveChanges();
                 return Results.NoContent(); //Codigo 204
             }

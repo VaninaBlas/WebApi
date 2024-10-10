@@ -6,27 +6,27 @@ GET {{Api_HostAddress}}/api/roles/
 Accept: application/json
 ###
 // Obtener rol especifico
-GET {{Api_HostAddress}}/api/rol?idRol=ca98c96f-73a3-4ec3-8491-aeccb449ef10
+GET {{Api_HostAddress}}/api/rol?idRol=a1d3a394-1bbf-4d98-8c46-c52c6c14a992
 Accept: application/json
 ###
 // Crear rol
 POST {{Api_HostAddress}}/api/rol/
 Content-Type: application/json
 {
-    "Nombre": "Delegado",
+    "Nombre": "delegado",
     "Habilitado": true
 }
 ###
 // Actualizar rol
-PUT {{Api_HostAddress}}/api/rol?idRol=6fbc67c7-9ed0-495c-b4d4-8b0446194eed
+PUT {{Api_HostAddress}}/api/rol?idRol=ca98c96f-73a3-4ec3-8491-aeccb449ef10
 Content-Type: application/json
 {
-    "Nombre": "estudiante",
+    "Nombre": "rector",
     "Habilitado": false
 }
 ###
 // Eliminar rol
-DELETE {{Api_HostAddress}}/api/rol?idrol=ca98c96f-73a3-4ec3-8491-aeccb449ef10
+DELETE {{Api_HostAddress}}/api/rol?idrol=43771f2c-3b97-4478-9544-b2c966eabe13
 Accept: application/json
 ### 
 
@@ -43,39 +43,40 @@ Accept: application/json
 POST {{Api_HostAddress}}/api/usuario/
 Content-Type: application/json
 {
-    "Nombre": "fdṕasdkpśfksdñlf{}",
-    "Email":"iliana.duarte@gmail.com",
-    "NombreUsuario":"iliduarte",
-    "Contrasena":"floresAmarillas"
+    "Nombre": "Juan",
+    "Email":"juanet12d1@gmail.com",
+    "NombreUsuario":"juan-15kh",
+    "Contrasena":"hola1234", 
+    "Habilitado": true
 }
 ###
 // Actualizar usuario
-PUT {{Api_HostAddress}}/usuario?idUsuario=2
+PUT {{Api_HostAddress}}/api/usuario?idUsuario=3
 Content-Type: application/json
 {
-    "Nombre":"Priscila",
-    "Email":"priet12@gmail.com",
-    "NombreUsuario":"pri.indumentaria@gmail.com",
-    "Contraseña":"michis"
+    "Nombre":"priscila",
+    "Email":"priscilaet12d1@gmail.com",
+    "NombreUsuario":"pri.indumentaria.h@gmail.com",
+    "Contrasena":"caperucita"
 }
 ###
 // Eliminar usuario
-DELETE {{Api_HostAddress}}/usuario?idUsuario=3
+DELETE {{Api_HostAddress}}/api/usuario?idUsuario=3
 Accept: application/json
 ###
 
 // Relacion usuario y rol
 // rol a usuario
-POST {{Api_HostAddress}}/rol/3/usuario/1
+POST {{Api_HostAddress}}/api/rol/ca98c96f-73a3-4ec3-8491-aeccb449ef10/usuario/2
 Content-Type: application/json
 ###
-DELETE {{Api_HostAddress}}/rol/3/usuario/1
+DELETE {{Api_HostAddress}}/api/rol/ca98c96f-73a3-4ec3-8491-aeccb449ef10/usuario/2
 Content-Type: application/json
 ###
 // usuario a rol
-POST {{Api_HostAddress}}/usuario/1/rol/2
+POST {{Api_HostAddress}}/api/usuario/3/rol/43771f2c-3b97-4478-9544-b2c966eabe13
 Content-Type: application/json
 ###
-DELETE {{Api_HostAddress}}/usuario/1/rol/2
+DELETE {{Api_HostAddress}}/api/usuario/3/rol/43771f2c-3b97-4478-9544-b2c966eabe13
 Content-Type: application/json
 ###
